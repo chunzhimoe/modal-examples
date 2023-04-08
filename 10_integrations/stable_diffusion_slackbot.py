@@ -85,9 +85,8 @@ async def run_stable_diffusion(prompt: str, channel_name: Optional[str] = None):
     from torch import float16
 
     pipe = StableDiffusionPipeline.from_pretrained(
-        "runwayml/stable-diffusion-v1-5",
+        "xiaolxl/GuoFeng3",
         use_auth_token=os.environ["HUGGINGFACE_TOKEN"],
-        revision="fp16",
         torch_dtype=float16,
         cache_dir=CACHE_PATH,
         device_map="auto",
